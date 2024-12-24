@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "ru.sberbank.lab2ser.model";
+option java_outer_classname = "EntryProto";
+
+message DeliveryEntry {
+  string market = 1;
+
+  message DeliveryProduct{
+      double cost = 1;
+      string name = 2;
+      string producer = 3;
+      string description = 4;
+      int64 id = 5;
+    }
+
+  repeated DeliveryProduct products = 2;
+
+    string cardNumber = 3;
+    double servicePercent = 4;
+}
