@@ -25,6 +25,7 @@ public class MaxMemory {
     public static void printMaxMemory() {
         final long maxMemory = Runtime.getRuntime().maxMemory();
 
-        System.out.printf("Max memory: %d MB", maxMemory / 1024 / 1024);
+        System.out.printf("Max memory: %d MB%n", maxMemory / 1024 / 1024);
+        System.out.printf("Total memory: %d MB%n", Runtime.getRuntime().totalMemory() / 1024 / 1024);
     }
 }
